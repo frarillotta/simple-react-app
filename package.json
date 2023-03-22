@@ -24,6 +24,8 @@
   "scripts": {
     "start-server": "nodemon src/server/server.js",
     "start-react": "HTTPS=true SSL_CRT_FILE=dev-certs/server-crt.pem SSL_KEY_FILE=dev-certs/server-key.pem react-scripts start",
+    "start-react:windows": "set HTTPS=true set SSL_CRT_FILE=dev-certs/server-crt.pem set SSL_KEY_FILE=dev-certs/server-key.pem react-scripts start",
+    "start:windows":  "concurrently --kill-others \"npm run start-server\" \"npm run start-react:windows\" ",
     "start": "concurrently --kill-others \"npm run start-server\" \"npm run start-react\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
