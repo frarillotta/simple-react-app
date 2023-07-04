@@ -22,7 +22,7 @@
     "wait-on": "^7.0.1"
   },
   "scripts": {
-    "start-server": "nodemon src/server/server.js",
+    "start-server": "nodemon src/server/index.js",
     "start-react": "HTTPS=true SSL_CRT_FILE=dev-certs/server-crt.pem SSL_KEY_FILE=dev-certs/server-key.pem react-scripts start",
     "start-react:windows": "set HTTPS=true set SSL_CRT_FILE=dev-certs/server-crt.pem set SSL_KEY_FILE=dev-certs/server-key.pem && react-scripts start",
     "start:windows":  "concurrently --kill-others \"npm run start-server\" \"npm run start-react:windows\" ",
